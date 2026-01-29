@@ -12,14 +12,14 @@ Mirt Gebeya is a responsive e-commerce platform connecting Ethiopian farmers dir
 - **Local Storage**: Cart and user data persist across sessions
 - **Accessibility**: WCAG compliant with semantic HTML and ARIA labels
 
-## 🛠️ Technologies Used
+## Technologies Used
 - **HTML**: Semantic markup with accessibility features
 - **CSS**: Custom CSS with Flexbox, CSS Grid, and CSS Variables
 - **JavaScript**: Vanilla JS with DOM manipulation and localStorage
 - **Font Awesome**: Icons for enhanced UI
 - **Google Fonts**: Typography styling
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 1. Download all project files
 2. Open `index.html` in any modern web browser
