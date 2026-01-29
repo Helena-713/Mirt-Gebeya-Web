@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirt Gebeya - Ethiopian Marketplace</title>
+    <meta name="description" content="Mirt Gebeya: Ethiopia's digital marketplace connecting farmers directly with consumers. Fresh produce, fair prices, same-day delivery in Addis Ababa.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <div class="logo">
+            <h1><i class="fas fa-leaf"></i> Mirt Gebeya</h1>
+            <p>Fresh Ethiopian Marketplace</p>
+        </div>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="cart.html" class="nav-link">
+                Cart <span class="cart-badge" id="cartCount" aria-live="polite">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main id="main-content" class="main-content">
+        <section class="hero-section" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h2 id="hero-title">Fresh from Ethiopian Farms</h2>
+                <p>Direct connection between farmers and consumers. Support local agriculture while getting the freshest products delivered to your door.</p>
+                <a href="products.html" class="cta-btn">
+                    <i class="fas fa-arrow-right"></i> Shop Fresh Products
+                </a>
+            </div>
+            <div class="hero-images">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&h=300" 
+                     alt="Fresh vegetables from Ethiopian farm" 
+                     class="hero-img"
+                     loading="lazy">
+            </div>
+        </section>
+        
+        <section class="features-section" aria-labelledby="features-title">
+            <h2 id="features-title" class="section-title">Why Choose Mirt Gebeya?</h2>
+            <p class="section-subtitle">We're committed to quality, fairness, and community</p>
+            <div class="features">
+                <article class="feature-card">
+                    <i class="fas fa-truck" aria-hidden="true"></i>
+                    <h3>Same Day Delivery</h3>
+                    <p>Fast delivery in Addis Ababa and surrounding areas. Orders placed before 2 PM delivered same day.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-hand-holding-usd" aria-hidden="true"></i>
+                    <h3>Fair Prices</h3>
+                    <p>Direct from farmers, no middlemen. Farmers earn more, you pay less.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                    <h3>Secure Payment</h3>
+                    <p>Telebirr, CBE Birr, or cash on delivery. Your payment is always protected.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-leaf" aria-hidden="true"></i>
+                    <h3>Fresh Guarantee</h3>
+                    <p>100% fresh guarantee. If you're not satisfied, we'll make it right.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="login" class="login-section" aria-labelledby="auth-title">
+            <div class="container">
+                <div class="auth-box">
+                    <div class="auth-tabs" role="tablist">
+                        <button class="auth-tab active" 
+                                data-tab="login" 
+                                role="tab" 
+                                aria-selected="true" 
+                                aria-controls="loginForm">
+                            Login
+                        </button>
+                        <button class="auth-tab" 
+                                data-tab="register" 
+                                role="tab" 
+                                aria-selected="false" 
+                                aria-controls="registerForm">
+                            Register
+                        </button>
+                    </div>
+                
+                    <form id="loginForm" class="auth-form active" role="tabpanel" aria-labelledby="login-tab">
+                        <h3 id="login-tab">Welcome Back</h3>
+                        <div class="form-group">
+                            <label for="loginPhone">Phone Number</label>
+                            <input type="tel" 
+                                   id="loginPhone" 
+                                   placeholder="0912345678" 
+                                   pattern="09[0-9]{8}" 
+                                   required
+                                   aria-describedby="loginPhoneHint">
+                            <small id="loginPhoneHint" class="form-hint">Enter your 10-digit Ethiopian phone number starting with 09</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" 
+                                   id="loginPassword" 
+                                   placeholder="Enter your password" 
+                                   minlength="6" 
+                                   required
+                                   aria-describedby="loginPasswordHint">
+                            <small id="loginPasswordHint" class="form-hint">Minimum 6 characters</small>
+                        </div>
+                        <button type="submit" class="auth-btn">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </button>
+                    </form>
+                    
+                    <form id="registerForm" class="auth-form" role="tabpanel" aria-labelledby="register-tab" hidden>
+                        <h3 id="register-tab">Create Account</h3>
+                        <div class="form-group">
+                            <label for="registerName">Full Name</label>
+                            <input type="text" 
+                                   id="registerName" 
+                                   placeholder="Your full name" 
+                                   required
+                                   aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPhone">Phone Number</label>
+                            <input type="tel" 
+                                   id="registerPhone" 
+                                   placeholder="0912345678" 
+                                   pattern="09[0-9]{8}" 
+                                   required
+                                   aria-describedby="registerPhoneHint">
+                            <small id="registerPhoneHint" class="form-hint">Enter your 10-digit Ethiopian phone number starting with 09</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword">Password</label>
+                            <input type="password" 
+                                   id="registerPassword" 
+                                   placeholder="Create a password" 
+                                   minlength="6" 
+                                   required
+                                   aria-describedby="registerPasswordHint">
+                            <small id="registerPasswordHint" class="form-hint">Minimum 6 characters</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerRole">Account Type</label>
+                            <select id="registerRole" required aria-required="true">
+                                <option value="buyer">I want to buy products</option>
+                                <option value="seller">I want to sell products</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="auth-btn">
+                            <i class="fas fa-user-plus"></i> Register
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <section class="footer-section">
+                <h4><i class="fas fa-leaf"></i> Mirt Gebeya</h4>
+                <p>Ethiopia's premier digital marketplace connecting farmers directly with consumers since 2024.</p>
+            </section>
+            <section class="footer-section">
+                <h4>Contact</h4>
+                <address>
+                    <p><i class="fas fa-phone"></i> +251 91 234 5678</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+                </address>
+            </section>
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="cart.html">Cart</a>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mirt Gebeya. Ethiopian Digital Marketplace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
