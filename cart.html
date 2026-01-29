@@ -1,0 +1,137 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Mirt Gebeya</title>
+    <meta name="description" content="Your shopping cart at Mirt Gebeya. Review items, update quantities, and checkout securely.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <div class="logo">
+            <h1><i class="fas fa-leaf"></i> Mirt Gebeya</h1>
+            <p>Fresh Ethiopian Marketplace</p>
+        </div>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="cart.html" class="nav-link active" aria-current="page">
+                Cart <span class="cart-badge" id="cartCount" aria-live="polite">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main id="main-content" class="main-content">
+
+        <section class="cart-section" aria-labelledby="cart-title">
+            <div class="container">
+                <h2 id="cart-title" class="section-title">Your Shopping Cart</h2>
+                <p class="section-subtitle">Review your items and proceed to checkout</p>
+                
+                <div class="cart-wrapper">
+                    <div class="cart-items-container">
+                        <div class="cart-items" id="cartItems" aria-live="polite">
+                            <div class="loading-spinner" id="cartLoading">
+                                <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                                <p>Loading your cart...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="continue-shopping" id="continueShopping" style="display: none;">
+                            <a href="products.html" class="btn-secondary">
+                                <i class="fas fa-arrow-left"></i> Continue Shopping
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <h3><i class="fas fa-receipt"></i> Order Summary</h3>
+                        
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal" aria-live="polite">0 Birr</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Delivery Fee:</span>
+                            <span>50 Birr</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total Amount:</span>
+                            <span id="totalAmount" aria-live="polite">50 Birr</span>
+                        </div>
+                        
+                        <div class="delivery-info">
+                            <h4><i class="fas fa-truck"></i> Delivery Information</h4>
+                            <p><strong>Addis Ababa:</strong> Same day delivery (50 Birr)</p>
+                            <p><strong>Other cities:</strong> 2-3 business days (100 Birr)</p>
+                            <p><small>Free delivery on orders over 500 Birr in Addis Ababa</small></p>
+                        </div>
+                        
+                        <fieldset class="payment-methods">
+                            <legend><h4>Payment Method:</h4></legend>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="telebirr" checked aria-checked="true">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Telebirr</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cbe" aria-checked="false">
+                                <i class="fas fa-university"></i>
+                                <span>CBE Birr</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cash" aria-checked="false">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>Cash on Delivery</span>
+                            </label>
+                        </fieldset>
+                        
+                        <button class="checkout-btn" id="checkoutBtn" aria-label="Complete your order">
+                            <i class="fas fa-lock"></i> Complete Order
+                        </button>
+                        
+                        <p class="checkout-note">
+                            <i class="fas fa-info-circle"></i> You'll be redirected to secure payment after confirmation
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <section class="footer-section">
+                <h4><i class="fas fa-leaf"></i> Mirt Gebeya</h4>
+                <p>Digital marketplace for Ethiopian producers</p>
+            </section>
+            <section class="footer-section">
+                <h4>Contact</h4>
+                <address>
+                    <p><i class="fas fa-phone"></i> +251 91 234 5678</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+                </address>
+            </section>
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="cart.html">Cart</a>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2026 Mirt Gebeya. Ethiopian Digital Marketplace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
