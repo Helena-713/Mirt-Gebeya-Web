@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Mirt Gebeya</title>
+    <meta name="description" content="Browse fresh Ethiopian products on Mirt Gebeya. Vegetables, fruits, herbs, and spices directly from local farmers.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
+        <div class="logo">
+            <h1><i class="fas fa-leaf"></i> Mirt Gebeya</h1>
+            <p>Fresh Ethiopian Marketplace</p>
+        </div>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="products.html" class="nav-link active" aria-current="page">Products</a>
+            <a href="cart.html" class="nav-link">
+                Cart <span class="cart-badge" id="cartCount" aria-live="polite">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main id="main-content" class="main-content">
+
+        <section class="products-section" aria-labelledby="products-title">
+            <div class="container">
+                <h2 id="products-title" class="section-title">Fresh Ethiopian Products</h2>
+                <p class="section-subtitle">Support local farmers and artisans. All products sourced directly from Ethiopian farms.</p>
+                
+                <div class="search-container" aria-label="Product search">
+                    <div class="search-box">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <input type="text" 
+                               id="productSearch" 
+                               placeholder="Search products by name..." 
+                               aria-label="Search products">
+                    </div>
+                </div>
+                
+                <div class="controls-row">
+                    <div class="category-tabs" role="tablist" aria-label="Filter products by category">
+                        <button class="category-btn active" 
+                                data-category="all" 
+                                role="tab" 
+                                aria-selected="true"
+                                aria-controls="productsGrid">
+                            All Products
+                        </button>
+                        <button class="category-btn" 
+                                data-category="vegetables" 
+                                role="tab" 
+                                aria-selected="false"
+                                aria-controls="productsGrid">
+                            Vegetables
+                        </button>
+                        <button class="category-btn" 
+                                data-category="fruits" 
+                                role="tab" 
+                                aria-selected="false"
+                                aria-controls="productsGrid">
+                            Fruits
+                        </button>
+                        <button class="category-btn" 
+                                data-category="herbs" 
+                                role="tab" 
+                                aria-selected="false"
+                                aria-controls="productsGrid">
+                            Herbs & Spices
+                        </button>
+                    </div>
+                    
+                    <div class="sort-options" aria-label="Sort products">
+                        <label for="sortSelect" class="sr-only">Sort by:</label>
+                        <select id="sortSelect" aria-label="Sort products by">
+                            <option value="default">Sort by: Default</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name: A to Z</option>
+                        </select>
+                    </div>
+                </div>
+                
+
+                <div class="products-grid" id="productsGrid" role="tabpanel" aria-live="polite">
+                    <div class="loading-spinner" id="loadingSpinner">
+                        <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                        <p>Loading fresh products...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <section class="footer-section">
+                <h4><i class="fas fa-leaf"></i> Mirt Gebeya</h4>
+                <p>Digital marketplace for Ethiopian producers</p>
+            </section>
+            <section class="footer-section">
+                <h4>Contact</h4>
+                <address>
+                    <p><i class="fas fa-phone"></i> +251 91 234 5678</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+                </address>
+            </section>
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="cart.html">Cart</a>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2026 Mirt Gebeya. Ethiopian Digital Marketplace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
